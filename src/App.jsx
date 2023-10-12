@@ -1,10 +1,10 @@
-function App(){
+import Counter from "./counter"
+import "./styles.css"
+
+export default function App() {
   return (
-  <>
-  <h1> Hola Mundo </h1>
-  <h2> Bienvenido </h2>
-  </>
+    <div className="App">
+      <Counter value={0} />
+    </div>
   )
 }
-
-export default App
