@@ -19,8 +19,28 @@ export const TodoApp = () => {
         }
         dispatch ( action )
     }
+    const handleDeleteTodo = (id) => {
+        const action = {
+          type: "[TODO] DELETE TODO",
+          payload: id
+        };
+        dispach(action);
+      };
+    
+      const handleToggleDone = (id) => {
+        const action = {
+          type: "[TODO] TOGGLE DONE",
+          payload: id
+        };
+        dispach(action);
+      };
 
     return (
+        todos,
+        handleNewTodo,
+        handleDeleteTodo,
+        handleToggleDone,
+
         <>
             <h1>TodoApp: 10, <small>pendientes: 2</small></h1>
             <hr/>
