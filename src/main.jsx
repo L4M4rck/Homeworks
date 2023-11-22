@@ -6,6 +6,8 @@ import { GifGrid } from './components/GifGrid'
 import FirstApp from './FirstApp'
 import { GiftExpertApp } from './GiftExpertApp'
 import { TodoApp } from './components/TodoApp'
+import { UserProvider } from './context/UserContext'
+import { AppRoutes } from './components/AppRoutes'
 
 
 
@@ -13,10 +15,9 @@ import { TodoApp } from './components/TodoApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-    <GiftExpertApp />
-    <FirstApp />
-    <TodoApp />
+    <UserProvider>
+      <AppRoutes />
+    </UserProvider>
     
     
 
