@@ -2,15 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import { store } from "./store/store";
-import { Registro } from "./Registro";
-import { Upload } from "./Upload";
+import { Crud } from "./crud";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-  <BrowserRouter>
-    <Registro />
-    <Upload />
-  </BrowserRouter>
-</Provider>
+  <Provider>
+    <BrowserRouter>
+      <Crud />
+    </BrowserRouter>
+  </Provider>
 )
