@@ -8,19 +8,11 @@ import { GiftExpertApp } from './GiftExpertApp'
 import { TodoApp } from './components/TodoApp'
 import { UserProvider } from './context/UserContext'
 import { AppRoutes } from './components/AppRoutes'
-
-
-
-
+import { Provider } from 'react'
+import { store } from "./store/store";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <UserProvider>
-      <AppRoutes />
-    </UserProvider>
-    
-    
-
-
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>
 )
